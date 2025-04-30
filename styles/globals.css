@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 0 0;
+    --color-primary-green: 98,157, 140;
+    --color-primary-green-light: 164, 198,188;
+    --color-secondary-pink: 255,191, 249;
+    --color-secondary-pink-medium: 255,202, 160;
+    --color-secondary-pink-light: 255,212,196;
+    --color-tertiary-white: 249,251, 251;
+    --color-text-title: 79,79,79;
+    --color-text-subtitle: 51,51,51;
+    --color-text-header: 57, 65,73;
+  }
+  
+  :where(h1,h2,h3,h4,h5,h6) {
+    @apply text-header mb-4 leading-tight font-semibold;
+  }
+  
+  h1 { @apply text-6xl}
+  h2 { @apply text-5xl}
+  h3 { @apply text-2xl}
+  h4 { @apply text-xl}
+  
+  p {
+    @apply text-sm mb-4
+  }
+}
+
+@layer utilities {
+  .bg-primary-green {
+    background-color: rgb(var(--color-primary-green));
+  }
+
+  .text-primary-green {
+    color: rgb(var(--color-primary-green));
+  }
+
+  .text-header {
+    color: rgb(var(--color-text-header));
+  }
+}
