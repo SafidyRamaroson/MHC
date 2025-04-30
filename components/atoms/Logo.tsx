@@ -1,11 +1,9 @@
 "use client";
 
 import { Quote } from "lucide-react";
-import Image from "next/image";
-
 
 export function Logo(){
     return(
-        <span><Quote />Serenity Haven <br /> Wellness </span>
+        <span className="flex gap-2"><Quote />Serenity Haven <br /> Wellness </span>
     )
 }

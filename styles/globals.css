@@ -11,8 +11,8 @@ body {
     --background: 0 0% 0 0;
     --color-primary-green: 98,157, 140;
     --color-primary-green-light: 164, 198,188;
-    --color-secondary-pink: 255,191, 249;
-    --color-secondary-pink-medium: 255,202, 160;
+    --color-secondary-pink: 255,191,249;
+    --color-secondary-pink-medium: 255,202,160;
     --color-secondary-pink-light: 255,212,196;
     --color-tertiary-white: 249,251, 251;
     --color-text-title: 79,79,79;
@@ -21,7 +21,7 @@ body {
   }
   
   :where(h1,h2,h3,h4,h5,h6) {
-    @apply text-header mb-4 leading-tight font-semibold;
+    @apply mb-4 leading-tight font-semibold;
   }
   
   h1 { @apply text-6xl}
@@ -41,9 +41,5 @@ body {
 
   .text-primary-green {
     color: rgb(var(--color-primary-green));
-  }
-
-  .text-header {
-    color: rgb(var(--color-text-header));
   }
 }

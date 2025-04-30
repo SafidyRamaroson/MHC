@@ -1,54 +1,46 @@
 "use client";
 
-import { motion } from "motion/react";
-import { HeroSubTitle, HeroTitle } from "../atoms";
-import { BikeDelivery, FoodCardHero, HeroButtonsCTA } from "../molecules";
-import { containerVariants } from "@/utils/motion";
-import { foodsHero } from "@/data";
-
+import { cn } from "@/utils/tailwind";
+import { Button } from "../ui/button";
+import Image from "next/image";
 
 export function HeroSection() {
+    const heroImgs = [
+        {
+            img: "/assets/hero1.png",
+            alt: "image-1",
+            bgColor: "bg-primary-greenLight"
+        },
+        {
+            img: "/assets/hero1.png",
+            alt: "image-2",
+            bgColor: "bg-secondary-pinkLight"
+        },
+        {
+            img: "/assets/hero1.png",
+            alt: "image-3",
+            bgColor: "bg-secondary-pinkMedium"
+        },
+        {
+            img: "/assets/hero1.png",
+            alt: "image-4",
+            bgColor: "bg-primary-green"
+        },
+    ]
     return (
-        <div className="w-5/6 grid grid-cols-1 md:grid-cols-2">
-            <div>
-                <BikeDelivery />
-                <HeroTitle />
-                <HeroSubTitle />
-                <HeroButtonsCTA />
+        <div className="w-5/6 h-fit grid grid-cols-1 md:grid-cols-2 mx-auto py-[100px] gap-4 ">
+            <div className="flex flex-col justify-center">
+                <h1>Find Your Path to Emotional Wellness <br/>Today</h1>
+                <p className="mt-[30px]">Find Your Path to Emotional Wellness Today
+                We believe in creating a safe, supportive space for individuals seeking mental and emotional healing
+                </p>
+                <Button className="bg-primary-green text-white mt-[40px] w-fit shadow-sm">Book Appointment</Button>
             </div>
-            <motion.div
-                variants={containerVariants}
-                initial="initial"
-                animate="animate"
-                exit="exit"
-                viewport={{
-                    margin: "-100px"
-                }}
-                className="flex justify-end mt-8">
-                <motion.div
-                    variants={containerVariants}
-                    initial="initial"
-                    animate="animate"
-                    exit="exit"
-                    viewport={{
-                        margin: "-100px"
-                    }}
-                    className="w-4/5 md:w-3/5 rounded-2xl bg-gradient-to-bl from-gray-100 to-white pb-8 -z-30">
-                    {/* FoodiesHero */}
-                    <motion.div
-                        variants={containerVariants}
-                        initial="initial"
-                        animate="animate"
-                        exit="exit"
-                        viewport={{
-                            margin: "-100px"
-                        }}
-                        className="grid grid-cols-2 row gap-x-24 gap-y-16 pt-12 z-10">
-                        {foodsHero.map((food, idx) => <FoodCardHero
-                            alt={food.alt} image={food.image} price={food.price} productName={food.productName} key={idx} />)}
-                    </motion.div>
-                </motion.div>
-            </motion.div>
+            <div className="grid grid-cols-2 gap-4">
+                {heroImgs.map((heroImg,idx) => <div className={"border h-[300px] rounded-xl flex items-end justify-center " + heroImg.bgColor} key={idx}>
+                    <Image src={heroImg.img} alt={heroImg.alt} height={140} width={100} className="w-5/6"/>
+                </div>)}
+            </div>
         </div>
     )
 }

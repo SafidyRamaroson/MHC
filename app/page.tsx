@@ -1,7 +1,11 @@
 "use client";
 
+import { HeroTemplate } from "@/components/templates/HeroTemplate";
+
 export default function IndexPage() {
     return (
-        <p>Index Page</p>            
+        <>
+            <HeroTemplate />
+        </>          
     )
 }
