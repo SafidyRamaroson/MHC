@@ -36,6 +36,13 @@ const config: Config = {
 			scrollBehavior: [
 				'responsive'
 			]
+		},
+		fontSize: {
+			xs: 'var(--xs)',
+			sm:'var(--sm)',
+			md: 'var(--md)',
+			lg: 'var(--lg)',
+			xl: 'var(--xl)'
 		}
 	}
 };

@@ -13,7 +13,7 @@ const roboto = Roboto({
 
 
 export const metadata: Metadata = {
-  title: "Mebtal Health Center",
+  title: "Mental Health Center",
 };
 
 export default function RootLayout({

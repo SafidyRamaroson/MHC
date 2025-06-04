@@ -18,19 +18,25 @@ body {
     --color-text-title: 79,79,79;
     --color-text-subtitle: 51,51,51;
     --color-text-header: 57, 65,73;
+
+    --xs: 0.875rem;
+		--sm:1.125rem;
+		--md: 1.5rem;
+		--lg: 3rem;
+		--xl: 4rem;
   }
   
   :where(h1,h2,h3,h4,h5,h6) {
     @apply mb-4 leading-tight font-semibold;
   }
   
-  h1 { @apply text-6xl}
-  h2 { @apply text-5xl}
-  h3 { @apply text-2xl}
-  h4 { @apply text-xl}
+  h1 { @apply text-xl}
+  h2 { @apply text-lg}
+  h3 { @apply text-md}
+  h4 { @apply text-sm}
   
   p {
-    @apply text-sm mb-4
+    @apply text-sm
   }
 }
 

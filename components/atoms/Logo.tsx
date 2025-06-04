@@ -1,9 +1,10 @@
 "use client";
 
-import { Quote } from "lucide-react";
+import LogoSvg from "@/public/assets/Logo.svg";
+import Image from "next/image";
 
 export function Logo(){
     return(
-        <span className="flex gap-2"><Quote />Serenity Haven <br /> Wellness </span>
+        <Image src={LogoSvg} width={186} height={45} alt="Logo Image"/>
     )
 }
